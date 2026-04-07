@@ -86,7 +86,7 @@ export const techStackGroups: TechStackGroup[] = [
 		category: 'Tooling',
 		description:
 			'개발 속도를 높이고 반복 작업을 줄이면서, 구현과 기록을 더 효율적으로 이어가기 위해 사용하는 도구들입니다.',
-		items: ['VSCode', 'Codex']
+		items: ['VSCode', 'Codex', 'Cursor']
 	}
 ];
 

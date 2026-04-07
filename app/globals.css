@@ -102,7 +102,6 @@
 		color: var(--ui-color-text-main);
 		font-family: var(--ui-font-sans);
 		line-height: 1.6;
-		text-rendering: optimizeLegibility;
 	}
 
 	a {

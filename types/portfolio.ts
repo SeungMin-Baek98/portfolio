@@ -31,6 +31,7 @@ export type Strength = {
 
 export type TechStackGroup = {
 	category: string;
+	description: string;
 	items: string[];
 };
 

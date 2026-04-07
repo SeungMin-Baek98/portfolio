@@ -27,7 +27,7 @@ export function TechStackSection() {
 												{group.category}
 											</p>
 											<p className="text-text-subtle text-sm">
-												주로 이 영역에서 사용하고 있는 도구들
+												{group.description}
 											</p>
 										</div>
 

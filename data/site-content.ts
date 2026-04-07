@@ -60,22 +60,32 @@ export const keyStrengths: Strength[] = [
 export const techStackGroups: TechStackGroup[] = [
 	{
 		category: 'Front-End',
+		description:
+			'주로 화면 구조를 설계하고, 사용자 흐름이 자연스럽게 이어지도록 인터페이스를 구현할 때 사용하는 기술입니다.',
 		items: ['React', 'Next.js', 'TypeScript', 'JavaScript']
 	},
 	{
 		category: 'State & Data',
+		description:
+			'서버 상태와 클라이언트 상태를 분리해서 다루고, 데이터 흐름을 더 안정적으로 관리하기 위해 활용하고 있습니다.',
 		items: ['TanStack Query', 'Zustand', 'Supabase']
 	},
 	{
 		category: 'Styling & UI',
+		description:
+			'가독성 좋은 화면 구성과 재사용 가능한 UI 시스템, 그리고 필요한 만큼의 자연스러운 인터랙션을 만드는 데 사용합니다.',
 		items: ['Tailwind CSS', 'Framer Motion', 'Storybook']
 	},
 	{
 		category: 'Collaboration',
+		description:
+			'작업 맥락을 공유하고 이슈를 정리하며, 리뷰와 커뮤니케이션이 끊기지 않도록 협업 과정에서 주로 활용합니다.',
 		items: ['GitHub', 'Notion', 'Jira', 'Discord']
 	},
 	{
 		category: 'Tooling',
+		description:
+			'개발 속도를 높이고 반복 작업을 줄이면서, 구현과 기록을 더 효율적으로 이어가기 위해 사용하는 도구들입니다.',
 		items: ['VSCode', 'Codex']
 	}
 ];

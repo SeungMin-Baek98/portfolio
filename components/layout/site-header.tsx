@@ -22,11 +22,11 @@ export function SiteHeader() {
 			<div className="page-shell flex items-center justify-between gap-6 py-5">
 				<Link href="/" className="min-w-fit">
 					<span className="text-text-subtle block text-sm font-semibold tracking-[0.2em] uppercase">
-						BSM Portfolio
+						Baek Seung Min
 					</span>
-					<span className="text-text-main mt-1 block text-sm">
+					{/* <span className="text-text-main mt-1 block text-sm">
 						Problem solving and UX-focused frontend work
-					</span>
+					</span> */}
 				</Link>
 
 				<nav aria-label="Primary" className="overflow-x-auto">

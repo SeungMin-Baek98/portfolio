@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 						</h3>
 						<Link
 							href={`/projects/${project.slug}`}
-							className="text-text-main text-sm font-semibold transition-opacity hover:opacity-70">
+							className="text-text-main text-sm font-semibold transition-opacity hover:underline hover:opacity-70">
 							자세히 보기
 						</Link>
 					</div>

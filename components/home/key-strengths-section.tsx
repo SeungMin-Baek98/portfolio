@@ -1,5 +1,6 @@
 import { keyStrengths } from "@/data/site-content";
 
+import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export function KeyStrengthsSection() {
@@ -14,25 +15,28 @@ export function KeyStrengthsSection() {
           />
 
           <div className="grid gap-5 md:grid-cols-3">
-            {keyStrengths.map((strength) => (
-              <article
+            {keyStrengths.map((strength, index) => (
+              <FadeIn
                 key={strength.title}
-                className="surface-panel p-6 md:p-7"
+                className="h-full"
+                delay={0.05 * index}
               >
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <p className="text-title font-semibold text-text-main">
-                      {strength.title}
-                    </p>
-                    <p className="text-sm font-medium text-text-subtle">
-                      {strength.summary}
+                <article className="surface-panel h-full p-6 md:p-7">
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <p className="text-title font-semibold text-text-main">
+                        {strength.title}
+                      </p>
+                      <p className="text-sm font-medium text-text-subtle">
+                        {strength.summary}
+                      </p>
+                    </div>
+                    <p className="text-body text-text-subtle">
+                      {strength.detail}
                     </p>
                   </div>
-                  <p className="text-body text-text-subtle">
-                    {strength.detail}
-                  </p>
-                </div>
-              </article>
+                </article>
+              </FadeIn>
             ))}
           </div>
         </div>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { contactContent } from "@/data/site-content";
 
 import { ButtonLink } from "@/components/ui/button-link";
+import { FadeIn } from "@/components/ui/fade-in";
 import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata: Metadata = {
@@ -24,37 +25,41 @@ export default function ContactPage() {
         <div className="page-shell section-space pt-8">
           <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_18rem]">
             <div className="grid gap-5">
-              {contactContent.items.map((item) => (
-                <article key={item.label} className="surface-panel p-6 md:p-7">
-                  <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-                    <div className="space-y-2">
-                      <p className="text-sm font-semibold tracking-[0.18em] text-text-subtle uppercase">
-                        {item.label}
-                      </p>
-                      <p className="text-title font-semibold text-text-main">
-                        {item.value}
-                      </p>
-                      <p className="text-sm text-text-subtle">{item.note}</p>
-                    </div>
+              {contactContent.items.map((item, index) => (
+                <FadeIn key={item.label} delay={0.06 * index}>
+                  <article className="surface-panel p-6 md:p-7">
+                    <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+                      <div className="space-y-2">
+                        <p className="text-sm font-semibold tracking-[0.18em] text-text-subtle uppercase">
+                          {item.label}
+                        </p>
+                        <p className="text-title font-semibold text-text-main">
+                          {item.value}
+                        </p>
+                        <p className="text-sm text-text-subtle">{item.note}</p>
+                      </div>
 
-                    <ButtonLink href={item.href} external variant="secondary">
-                      바로 이동
-                    </ButtonLink>
-                  </div>
-                </article>
+                      <ButtonLink href={item.href} external variant="secondary">
+                        바로 이동
+                      </ButtonLink>
+                    </div>
+                  </article>
+                </FadeIn>
               ))}
             </div>
 
-            <aside className="surface-panel-muted p-6">
-              <div className="space-y-4">
-                <p className="text-sm font-semibold tracking-[0.18em] text-text-subtle uppercase">
-                  Contact Note
-                </p>
-                <p className="text-body text-text-subtle">
-                  {contactContent.note}
-                </p>
-              </div>
-            </aside>
+            <FadeIn delay={0.12}>
+              <aside className="surface-panel-muted p-6">
+                <div className="space-y-4">
+                  <p className="text-sm font-semibold tracking-[0.18em] text-text-subtle uppercase">
+                    Contact Note
+                  </p>
+                  <p className="text-body text-text-subtle">
+                    {contactContent.note}
+                  </p>
+                </div>
+              </aside>
+            </FadeIn>
           </div>
         </div>
       </section>

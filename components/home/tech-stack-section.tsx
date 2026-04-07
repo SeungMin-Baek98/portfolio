@@ -1,5 +1,6 @@
 import { techStackGroups } from "@/data/site-content";
 
+import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export function TechStackSection() {
@@ -14,30 +15,33 @@ export function TechStackSection() {
           />
 
           <div className="grid gap-5 lg:grid-cols-2">
-            {techStackGroups.map((group) => (
-              <article
+            {techStackGroups.map((group, index) => (
+              <FadeIn
                 key={group.category}
-                className="surface-panel p-6 md:p-7"
+                className="h-full"
+                delay={0.06 * index}
               >
-                <div className="space-y-5">
-                  <div className="space-y-2">
-                    <p className="text-title font-semibold text-text-main">
-                      {group.category}
-                    </p>
-                    <p className="text-sm text-text-subtle">
-                      주로 이 영역에서 사용하고 있는 도구들
-                    </p>
-                  </div>
+                <article className="surface-panel h-full p-6 md:p-7">
+                  <div className="space-y-5">
+                    <div className="space-y-2">
+                      <p className="text-title font-semibold text-text-main">
+                        {group.category}
+                      </p>
+                      <p className="text-sm text-text-subtle">
+                        주로 이 영역에서 사용하고 있는 도구들
+                      </p>
+                    </div>
 
-                  <ul className="flex flex-wrap gap-2">
-                    {group.items.map((item) => (
-                      <li key={item} className="chip">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+                    <ul className="flex flex-wrap gap-2">
+                      {group.items.map((item) => (
+                        <li key={item} className="chip">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              </FadeIn>
             ))}
           </div>
         </div>

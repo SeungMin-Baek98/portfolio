@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ProjectCard } from "@/components/projects/project-card";
+import { FadeIn } from "@/components/ui/fade-in";
 import { PageIntro } from "@/components/ui/page-intro";
 import { getAllProjects } from "@/lib/portfolio";
 
@@ -35,8 +36,14 @@ export default function ProjectsPage() {
       <section className="section-band-muted">
         <div className="page-shell section-space pt-8">
           <div className="grid gap-5 lg:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+            {projects.map((project, index) => (
+              <FadeIn
+                key={project.slug}
+                className="h-full"
+                delay={0.05 * index}
+              >
+                <ProjectCard project={project} />
+              </FadeIn>
             ))}
           </div>
         </div>

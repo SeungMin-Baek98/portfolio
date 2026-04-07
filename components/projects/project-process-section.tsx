@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+
 import { cn } from "@/lib/utils";
 import type { DetailSection } from "@/types/portfolio";
 
@@ -16,6 +18,7 @@ export function ProjectProcessSection({
     ...sections.map((section) => section.pages.length),
   );
   const [currentIndex, setCurrentIndex] = useState(0);
+  const shouldReduceMotion = useReducedMotion();
   const sectionToneClasses = [
     {
       wrapper:
@@ -65,7 +68,7 @@ export function ProjectProcessSection({
                   aria-pressed={isActive}
                   aria-label={`${index + 1}단계`}
                 >
-                  {index + 1}
+                  <motion.span layout>{index + 1}</motion.span>
                 </button>
               );
             })}
@@ -109,64 +112,87 @@ export function ProjectProcessSection({
               </div>
             </div>
 
-            <div className="space-y-5">
-              {sections.map((section, sectionIndex) => {
-                const page = section.pages[currentIndex];
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={`process-step-panel-${currentIndex}`}
+                className="space-y-5"
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={shouldReduceMotion ? undefined : { opacity: 0, y: -10 }}
+                transition={{
+                  duration: 0.28,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                {sections.map((section, sectionIndex) => {
+                  const page = section.pages[currentIndex];
 
-                if (!page) {
-                  return null;
-                }
+                  if (!page) {
+                    return null;
+                  }
 
-                return (
-                  <article
-                    key={`${section.title}-${page.label}`}
-                    className={cn(
-                      "rounded-xl border border-border-strong px-5 py-5 md:px-6 md:py-6",
-                      sectionToneClasses[sectionIndex]?.wrapper,
-                    )}
-                  >
-                    <div className="grid gap-5 lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-6">
-                      <div className="space-y-3">
-                        <span
-                          className={cn(
-                            "inline-flex rounded-pill border px-3 py-2 text-sm font-semibold",
-                            sectionToneClasses[sectionIndex]?.badge,
-                          )}
-                        >
-                          {section.title}
-                        </span>
-                        <p className="text-sm text-text-subtle">{page.label}</p>
-                        <p className="text-sm text-text-subtle">
-                          {section.description}
-                        </p>
-                      </div>
-
-                      <div className="space-y-4">
-                        <div className="space-y-2">
-                          <h3 className="text-title font-semibold text-text-main">
-                            {page.headline}
-                          </h3>
+                  return (
+                    <motion.article
+                      key={`${section.title}-${page.label}`}
+                      className={cn(
+                        "rounded-xl border border-border-strong px-5 py-5 md:px-6 md:py-6",
+                        sectionToneClasses[sectionIndex]?.wrapper,
+                      )}
+                      initial={
+                        shouldReduceMotion ? false : { opacity: 0, y: 12 }
+                      }
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.24,
+                        delay: shouldReduceMotion ? 0 : sectionIndex * 0.05,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                    >
+                      <div className="grid gap-5 lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-6">
+                        <div className="space-y-3">
+                          <span
+                            className={cn(
+                              "inline-flex rounded-pill border px-3 py-2 text-sm font-semibold",
+                              sectionToneClasses[sectionIndex]?.badge,
+                            )}
+                          >
+                            {section.title}
+                          </span>
                           <p className="text-sm text-text-subtle">
-                            {page.description}
+                            {page.label}
+                          </p>
+                          <p className="text-sm text-text-subtle">
+                            {section.description}
                           </p>
                         </div>
 
-                        <ul className="space-y-3">
-                          {page.bullets.map((bullet) => (
-                            <li
-                              key={bullet}
-                              className="rounded-md border border-border/70 bg-white/92 px-4 py-3 text-sm text-text-main"
-                            >
-                              {bullet}
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="space-y-4">
+                          <div className="space-y-2">
+                            <h3 className="text-title font-semibold text-text-main">
+                              {page.headline}
+                            </h3>
+                            <p className="text-sm text-text-subtle">
+                              {page.description}
+                            </p>
+                          </div>
+
+                          <ul className="space-y-3">
+                            {page.bullets.map((bullet) => (
+                              <li
+                                key={bullet}
+                                className="rounded-md border border-border/70 bg-white/92 px-4 py-3 text-sm text-text-main"
+                              >
+                                {bullet}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
+                    </motion.article>
+                  );
+                })}
+              </motion.div>
+            </AnimatePresence>
           </div>
         </article>
       </div>

@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { FadeIn } from "@/components/ui/fade-in";
+
 type PageIntroProps = {
   eyebrow: string;
   title: string;
@@ -17,19 +19,25 @@ export function PageIntro({
     <section className="section-band">
       <div className="page-shell section-space pb-10">
         <div className="section-box grid gap-8 p-7 md:p-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-end">
-          <div className="space-y-5">
-            <span className="eyebrow">{eyebrow}</span>
-            <div className="space-y-4">
-              <h1 className="max-w-4xl text-display font-semibold tracking-[-0.04em] text-text-main">
-                {title}
-              </h1>
-              <p className="max-w-2xl text-body text-text-subtle">
-                {description}
-              </p>
+          <FadeIn>
+            <div className="space-y-5">
+              <span className="eyebrow">{eyebrow}</span>
+              <div className="space-y-4">
+                <h1 className="max-w-4xl text-display font-semibold tracking-[-0.04em] text-text-main">
+                  {title}
+                </h1>
+                <p className="max-w-2xl text-body text-text-subtle">
+                  {description}
+                </p>
+              </div>
             </div>
-          </div>
+          </FadeIn>
 
-          {aside ? <div className="surface-panel p-6">{aside}</div> : null}
+          {aside ? (
+            <FadeIn delay={0.08}>
+              <div className="surface-panel p-6">{aside}</div>
+            </FadeIn>
+          ) : null}
         </div>
       </div>
     </section>

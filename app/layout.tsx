@@ -1,20 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Noto_Sans_KR } from "next/font/google";
+
+import { SiteShell } from "@/components/layout/site-shell";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSansKr = Noto_Sans_KR({
+  variable: "--font-noto-sans-kr",
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "백승민 포트폴리오",
-  description: "백승민의 포트폴리오 사이트입니다.",
+  title: {
+    default: "백승민 | Frontend Portfolio",
+    template: "%s | 백승민 포트폴리오",
+  },
+  description:
+    "문제 해결 과정과 사용자 경험 개선 관점을 중심으로 구성한 프론트엔드 개발자 포트폴리오 예시 사이트입니다.",
 };
 
 export default function RootLayout({
@@ -25,9 +36,11 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${notoSansKr.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body>{children}</body>
+      <body className="min-h-full bg-background text-text-main">
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   );
 }

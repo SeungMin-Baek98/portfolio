@@ -377,7 +377,7 @@ export const projects: Project[] = [
 	},
 	{
 		slug: 'demodev-portfolio-rebuild',
-		name: 'Demodev Portfolio Rebuild',
+		name: 'Demodev',
 		tagline:
 			'인턴 기간 동안 자사 홈페이지와 포트폴리오 페이지 구조를 개선한 실무 경험',
 		summary:

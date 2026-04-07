@@ -16,9 +16,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
 				</div>
 
 				<div className="space-y-3">
-					<h3 className="text-title text-text-main font-semibold">
-						{project.name}
-					</h3>
+					<div className="flex items-center justify-between">
+						<h3 className="text-title text-text-main font-semibold">
+							{project.name}
+						</h3>
+						<Link
+							href={`/projects/${project.slug}`}
+							className="text-text-main text-sm font-semibold transition-opacity hover:opacity-70">
+							자세히 보기
+						</Link>
+					</div>
 					<p className="text-text-subtle text-sm font-medium">
 						{project.tagline}
 					</p>
@@ -36,11 +43,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
 			<div className="border-border/70 mt-8 flex items-center justify-between gap-4 border-t pt-5">
 				<p className="text-text-subtle max-w-md text-sm">{project.impact}</p>
-				<Link
-					href={`/projects/${project.slug}`}
-					className="text-text-main text-sm font-semibold transition-opacity hover:opacity-70">
-					자세히 보기
-				</Link>
 			</div>
 		</article>
 	);

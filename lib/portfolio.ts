@@ -1,19 +1,19 @@
-import { projects } from "@/data/projects";
+import { projects } from '@/data/projects';
 
 export function getAllProjects() {
-  return projects;
+	return projects;
 }
 
 export function getFeaturedProjects() {
-  return projects.filter((project) => project.featured);
+	return projects.filter(project => project.featured);
 }
 
 export function getProjectBySlug(slug: string) {
-  return projects.find((project) => project.slug === slug);
+	return projects.find(project => project.slug === slug);
 }
 
 export function getProjectParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
+	return projects.map(project => ({
+		slug: project.slug
+	}));
 }

@@ -1,18 +1,18 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { SiteFooter } from "@/components/layout/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from '@/components/layout/site-footer';
+import { SiteHeader } from '@/components/layout/site-header';
 
 type SiteShellProps = {
-  children: ReactNode;
+	children: ReactNode;
 };
 
 export function SiteShell({ children }: SiteShellProps) {
-  return (
-    <div className="flex min-h-screen flex-col">
-      <SiteHeader />
-      <main className="flex-1">{children}</main>
-      <SiteFooter />
-    </div>
-  );
+	return (
+		<div className="flex min-h-screen flex-col">
+			<SiteHeader />
+			<main className="flex-1">{children}</main>
+			<SiteFooter />
+		</div>
+	);
 }

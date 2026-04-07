@@ -29,7 +29,7 @@ export function SiteHeader() {
 					</span> */}
 				</Link>
 
-				<nav aria-label="Primary" className="overflow-x-auto">
+				<nav aria-label="Primary" className="hidden overflow-x-auto sm:block">
 					<ul className="flex min-w-fit items-center gap-2">
 						{navigationItems.map(item => {
 							const isActive = isActivePath(pathname, item.href);

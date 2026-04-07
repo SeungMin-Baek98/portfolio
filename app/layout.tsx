@@ -36,6 +36,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="ko"
+			suppressHydrationWarning
 			className={`${notoSansKr.variable} ${ibmPlexMono.variable} h-full antialiased`}>
 			<body className="bg-background text-text-main min-h-full">
 				<SiteShell>{children}</SiteShell>

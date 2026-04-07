@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { ProjectDetailSection } from "@/components/projects/project-detail-section";
+import { ProjectProcessSection } from "@/components/projects/project-process-section";
 import { ButtonLink } from "@/components/ui/button-link";
 import { getProjectBySlug, getProjectParams } from "@/lib/portfolio";
 
@@ -59,7 +59,9 @@ export default async function ProjectDetailPage({
                   {project.name}
                 </h1>
                 <p className="text-lg text-text-subtle">{project.tagline}</p>
-                <p className="text-body text-text-subtle">{project.detail.overview}</p>
+                <p className="text-body text-text-subtle">
+                  {project.detail.overview}
+                </p>
               </div>
 
               <div className="grid gap-4 border-t border-border/70 pt-5 md:grid-cols-3">
@@ -77,15 +79,13 @@ export default async function ProjectDetailPage({
                 </div>
                 <div className="space-y-1">
                   <p className="text-sm text-text-subtle">역할</p>
-                  <p className="text-sm font-medium text-text-main">{project.role}</p>
+                  <p className="text-sm font-medium text-text-main">
+                    {project.role}
+                  </p>
                 </div>
               </div>
             </div>
           </section>
-
-          <ProjectDetailSection section={project.detail.problem} />
-          <ProjectDetailSection section={project.detail.solution} />
-          <ProjectDetailSection section={project.detail.result} />
 
           <section className="surface-panel p-7 md:p-8">
             <div className="space-y-5">
@@ -116,6 +116,14 @@ export default async function ProjectDetailPage({
               </div>
             </div>
           </section>
+
+          <ProjectProcessSection
+            sections={[
+              project.detail.problem,
+              project.detail.solution,
+              project.detail.result,
+            ]}
+          />
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-28 lg:self-start">

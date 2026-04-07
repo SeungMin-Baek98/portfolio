@@ -16,8 +16,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className="space-y-3">
-          <h3 className="text-title font-semibold text-text-main">{project.name}</h3>
-          <p className="text-sm font-medium text-text-subtle">{project.tagline}</p>
+          <h3 className="text-title font-semibold text-text-main">
+            {project.name}
+          </h3>
+          <p className="text-sm font-medium text-text-subtle">
+            {project.tagline}
+          </p>
           <p className="text-body text-text-subtle">{project.summary}</p>
         </div>
 

@@ -15,7 +15,10 @@ export function KeyStrengthsSection() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {keyStrengths.map((strength) => (
-              <article key={strength.title} className="surface-panel p-6 md:p-7">
+              <article
+                key={strength.title}
+                className="surface-panel p-6 md:p-7"
+              >
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <p className="text-title font-semibold text-text-main">
@@ -25,7 +28,9 @@ export function KeyStrengthsSection() {
                       {strength.summary}
                     </p>
                   </div>
-                  <p className="text-body text-text-subtle">{strength.detail}</p>
+                  <p className="text-body text-text-subtle">
+                    {strength.detail}
+                  </p>
                 </div>
               </article>
             ))}

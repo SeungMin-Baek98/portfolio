@@ -50,7 +50,9 @@ export default function ContactPage() {
                 <p className="text-sm font-semibold tracking-[0.18em] text-text-subtle uppercase">
                   Contact Note
                 </p>
-                <p className="text-body text-text-subtle">{contactContent.note}</p>
+                <p className="text-body text-text-subtle">
+                  {contactContent.note}
+                </p>
               </div>
             </aside>
           </div>

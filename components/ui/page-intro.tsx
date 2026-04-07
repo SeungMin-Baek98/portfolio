@@ -23,7 +23,9 @@ export function PageIntro({
               <h1 className="max-w-4xl text-display font-semibold tracking-[-0.04em] text-text-main">
                 {title}
               </h1>
-              <p className="max-w-2xl text-body text-text-subtle">{description}</p>
+              <p className="max-w-2xl text-body text-text-subtle">
+                {description}
+              </p>
             </div>
           </div>
 

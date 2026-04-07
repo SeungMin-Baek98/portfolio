@@ -34,10 +34,17 @@ export type TechStackGroup = {
   items: string[];
 };
 
+export type DetailSectionPage = {
+  label: string;
+  headline: string;
+  description: string;
+  bullets: string[];
+};
+
 export type DetailSection = {
   title: string;
   description: string;
-  bullets: string[];
+  pages: DetailSectionPage[];
 };
 
 export type TechReason = {

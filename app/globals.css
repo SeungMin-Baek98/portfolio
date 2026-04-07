@@ -17,8 +17,8 @@
   --ui-color-text-subtle: #635e56;
   --ui-color-text-inverse: #faf8f2;
 
-  --ui-font-sans: var(--font-noto-sans-kr), "Apple SD Gothic Neo", "Malgun Gothic",
-    sans-serif;
+  --ui-font-sans:
+    var(--font-noto-sans-kr), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --ui-font-mono: var(--font-ibm-plex-mono), monospace;
 
   --ui-text-display: clamp(2.75rem, 7vw, 5.25rem);
@@ -150,8 +150,11 @@
   .section-box {
     border: 1px solid var(--ui-color-border-strong);
     border-radius: calc(var(--ui-radius-lg) + 0.25rem);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 253, 248, 0.88));
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 253, 248, 0.88)
+    );
     box-shadow: var(--ui-shadow-card);
   }
 

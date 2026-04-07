@@ -15,7 +15,10 @@ export function TechStackSection() {
 
           <div className="grid gap-5 lg:grid-cols-2">
             {techStackGroups.map((group) => (
-              <article key={group.category} className="surface-panel p-6 md:p-7">
+              <article
+                key={group.category}
+                className="surface-panel p-6 md:p-7"
+              >
                 <div className="space-y-5">
                   <div className="space-y-2">
                     <p className="text-title font-semibold text-text-main">

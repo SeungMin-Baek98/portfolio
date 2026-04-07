@@ -9,8 +9,7 @@ export function SiteFooter() {
 						Frontend Portfolio
 					</p>
 					<p className="text-text-subtle max-w-2xl text-sm">
-						문제를 정의하고 해결 과정을 보여주는 포트폴리오를 목표로 구성한 mock
-						기반 예시 사이트입니다.
+						&copy; {new Date().getFullYear()} 백승민 All rights reserved.
 					</p>
 				</div>
 

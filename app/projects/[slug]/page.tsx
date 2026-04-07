@@ -90,6 +90,16 @@ export default async function ProjectDetailPage({
 						</section>
 					</FadeIn>
 
+					<FadeIn delay={0.12}>
+						<ProjectProcessSection
+							sections={[
+								project.detail.problem,
+								project.detail.solution,
+								project.detail.result
+							]}
+						/>
+					</FadeIn>
+
 					<FadeIn delay={0.06}>
 						<section className="surface-panel p-7 md:p-8">
 							<div className="space-y-5">
@@ -121,16 +131,6 @@ export default async function ProjectDetailPage({
 								</div>
 							</div>
 						</section>
-					</FadeIn>
-
-					<FadeIn delay={0.12}>
-						<ProjectProcessSection
-							sections={[
-								project.detail.problem,
-								project.detail.solution,
-								project.detail.result
-							]}
-						/>
 					</FadeIn>
 				</div>
 

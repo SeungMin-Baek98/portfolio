@@ -154,7 +154,7 @@ export function ProjectProcessSection({
 														{page.label}
 													</p>
 													<p className="text-text-subtle text-sm">
-														{section.description}
+														{page.context}
 													</p>
 												</div>
 

@@ -37,6 +37,7 @@ export type TechStackGroup = {
 
 export type DetailSectionPage = {
 	label: string;
+	context: string;
 	headline: string;
 	description: string;
 	bullets: string[];

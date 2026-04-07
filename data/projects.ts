@@ -13,7 +13,7 @@ export const projects: Project[] = [
 		impact:
 			'공개 진입 흐름과 인증 가드, 캐시 전략, 공통 UI 구조를 함께 설계하며 사용성과 유지보수성을 동시에 개선',
 		technologies: [
-			'React 19',
+			'React',
 			'TypeScript',
 			'TanStack Query',
 			'Zustand',
@@ -48,6 +48,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '문제 1',
+						context:
+							'초기 진입 단계에서 인증이 먼저 등장해 서비스의 핵심 가치를 경험하기 어려운 상태였습니다.',
 						headline: '로그인 전 진입 장벽이 서비스 탐색을 막고 있었습니다',
 						description:
 							'홈, 게시글 상세, 프로필까지 모두 인증 뒤에만 열어두면 사용자는 서비스를 경험하기도 전에 이탈할 수 있었습니다.',
@@ -59,6 +61,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '문제 2',
+						context:
+							'사용자 상태에 따라 달라지는 정보를 같은 캐시로 다루면 잘못된 UI가 노출될 위험이 컸습니다.',
 						headline:
 							'로그인 상태 전환 시 사용자 의존 데이터가 섞일 위험이 있었습니다',
 						description:
@@ -71,6 +75,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '문제 3',
+						context:
+							'기능이 늘어날수록 카드형 화면과 상태 표현이 제각각 흩어지며 유지보수 비용이 빠르게 커졌습니다.',
 						headline:
 							'기능이 늘어날수록 카드형 UI와 상태 피드백이 흩어졌습니다',
 						description:
@@ -90,6 +96,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '해결 1',
+						context:
+							'탐색은 먼저 허용하고, 실제 행동 시점에만 인증을 연결하는 방식으로 진입 흐름을 다시 설계했습니다.',
 						headline: '공개 탐색과 보호된 액션을 분리했습니다',
 						description:
 							'홈, 게시글 상세, 프로필은 공개 라우트로 열어두고, 인증이 필요한 시점에만 안내가 나타나도록 사용자 흐름을 재설계했습니다.',
@@ -101,6 +109,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '해결 2',
+						context:
+							'viewer-aware 쿼리 키를 도입해 비로그인 사용자와 로그인 사용자의 상태가 섞이지 않도록 분리했습니다.',
 						headline: 'viewer-aware 캐시 전략으로 상태 일관성을 확보했습니다',
 						description:
 							'게시글 목록을 단순히 가져오는 데서 끝나지 않고, 각 게시글을 사용자 기준의 쿼리 키로도 분리해 저장하는 구조를 적용했습니다.',
@@ -112,6 +122,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '해결 3',
+						context:
+							'공통 카드 래퍼를 기준점으로 삼아 반복되던 화면 구조와 상태 피드백 패턴을 하나로 묶었습니다.',
 						headline: '공통 카드 래퍼로 반복되는 UI 구조를 정리했습니다',
 						description:
 							'`Surface`, `FeatureSurface` 계열 공통 래퍼를 도입해 카드 UI와 상태 표현을 하나의 기준으로 묶었습니다.',
@@ -130,6 +142,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '결과 1',
+						context:
+							'서비스를 먼저 탐색하고 난 뒤 행동을 선택할 수 있게 되면서 첫 경험의 마찰이 눈에 띄게 줄었습니다.',
 						headline: '탐색 중심의 첫 경험이 더 자연스러워졌습니다',
 						description:
 							'사용자는 로그인 전에 피드, 게시글, 프로필을 경험할 수 있게 되었고, 기능 이해 이전에 막히는 흐름이 줄었습니다.',
@@ -141,6 +155,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '결과 2',
+						context:
+							'로그인 상태가 바뀌더라도 사용자 의존 데이터가 안정적으로 유지되는 구조를 확보했습니다.',
 						headline:
 							'사용자 상태가 바뀌어도 데이터 표현이 안정적으로 유지됩니다',
 						description:
@@ -153,6 +169,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '결과 3',
+						context:
+							'공통 구조를 기준으로 삼으면서 이후 기능 추가와 화면 확장을 더 예측 가능하게 진행할 수 있게 됐습니다.',
 						headline:
 							'기능이 늘어나도 공통 구조 위에서 확장할 수 있게 됐습니다',
 						description:
@@ -167,7 +185,7 @@ export const projects: Project[] = [
 			},
 			techStack: [
 				{
-					name: 'React 19',
+					name: 'React',
 					reason:
 						'복잡한 상호작용을 작은 단위로 나누고 재사용 가능한 UI 구조를 유지하기 좋았습니다.'
 				},
@@ -237,6 +255,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '문제 1',
+						context:
+							'게시글 생성 화면이 한 번에 너무 많은 정보를 요구해 작성 시작 자체가 부담스러운 상태였습니다.',
 						headline: '단일 입력 화면이 작성 경험을 복잡하게 만들었습니다',
 						description:
 							'모든 입력 항목을 한 페이지에 배치한 초기 구조는 작성 시작 단계부터 부담을 주는 화면이었습니다.',
@@ -248,6 +268,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '문제 2',
+						context:
+							'반응형 환경에서는 입력 폼의 배치와 CTA 접근성이 더 크게 무너지며 작성 흐름이 끊기고 있었습니다.',
 						headline:
 							'반응형 환경에서 입력 폼과 레이아웃 안정성이 떨어졌습니다',
 						description:
@@ -260,6 +282,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '문제 3',
+						context:
+							'조회 화면에서는 사용자 역할에 따라 필요한 행동이 달라 단일 액션 구조로는 맥락을 전달하기 어려웠습니다.',
 						headline: '조회 화면에서는 역할에 따라 다른 행동이 필요했습니다',
 						description:
 							'게시글 작성자와 일반 사용자가 같은 화면을 보더라도 해야 하는 액션은 달랐고, 이를 단순한 버튼 나열로 해결하기 어려웠습니다.',
@@ -278,6 +302,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '해결 1',
+						context:
+							'긴 입력 화면을 단계형 퍼널로 나눠 사용자가 현재 무엇을 입력하는지 분명히 인식할 수 있게 했습니다.',
 						headline: '게시글 생성 흐름을 퍼널 구조로 재설계했습니다',
 						description:
 							'모든 입력을 한 화면에 보여주는 대신 단계별로 나누어, 사용자가 지금 어떤 정보를 입력하고 있는지 명확히 알 수 있게 했습니다.',
@@ -289,6 +315,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '해결 2',
+						context:
+							'조회 화면 하단 액션 영역을 역할 기준으로 분기해 사용자마다 필요한 행동만 선명하게 보여주었습니다.',
 						headline: '조회 화면 액션을 역할 기준으로 분기했습니다',
 						description:
 							'게시글 조회 시 전용 푸터를 두고, 작성자와 일반 사용자에게 필요한 액션만 보이도록 구조를 분리했습니다.',
@@ -300,6 +328,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '해결 3',
+						context:
+							'찜하기를 단순 토글이 아닌 별도 관리 흐름으로 다뤄 다시 방문하고 정리하는 경험까지 설계했습니다.',
 						headline: '찜한 목록을 별도 사용자 관리 흐름으로 구현했습니다',
 						description:
 							'하트 버튼과 로컬스토리지를 연동해 저장한 게시글을 모아볼 수 있게 하고, 오래된 항목 관리까지 고려했습니다.',
@@ -318,6 +348,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '결과 1',
+						context:
+							'작성 단계가 분명해지면서 사용자는 긴 입력 화면보다 훨씬 덜 부담스럽게 게시글을 완성할 수 있게 됐습니다.',
 						headline: '게시글 작성 과정이 더 자연스럽고 덜 부담스러워졌습니다',
 						description:
 							'단일 입력 화면에서 퍼널 구조로 바뀌면서 사용자는 각 단계에 집중할 수 있게 되었고, 작성 흐름도 더 선명해졌습니다.',
@@ -329,6 +361,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '결과 2',
+						context:
+							'사용자 역할에 맞는 액션만 노출되면서 조회 화면에서 해야 할 일이 더 직관적으로 이해되기 시작했습니다.',
 						headline: '역할별 액션 맥락이 명확해졌습니다',
 						description:
 							'조회 화면에서 작성자와 일반 사용자가 같은 화면에서 다른 목적을 수행해야 하는 문제를 더 자연스럽게 해결할 수 있었습니다.',
@@ -340,6 +374,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '결과 3',
+						context:
+							'찜한 목록이 저장소를 넘어 다시 찾고 관리하는 보관함 역할을 하도록 사용자 경험이 확장됐습니다.',
 						headline: '저장한 게시글 관리 경험도 함께 개선했습니다',
 						description:
 							'찜한 목록은 단순 저장소가 아니라 사용자가 다시 방문하고 정리할 수 있는 보관함처럼 동작하도록 설계했습니다.',
@@ -416,6 +452,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '문제 1',
+						context:
+							'디자인 변경 이후 기존 이미지 스키마만으로는 화면 크기별 배치를 안정적으로 유지하기 어려웠습니다.',
 						headline:
 							'기존 이미지 스키마로는 새 디자인을 안정적으로 받기 어려웠습니다',
 						description:
@@ -428,6 +466,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '문제 2',
+						context:
+							'프로젝트마다 이동 목적지가 달랐지만 데이터 구조는 외부 링크와 내부 상세 흐름을 충분히 구분하지 못했습니다.',
 						headline:
 							'외부 링크 프로젝트와 내부 상세 페이지 프로젝트를 같은 구조로 다루기 어려웠습니다',
 						description:
@@ -440,6 +480,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '문제 3',
+						context:
+							'반응형 보완과 예외 처리, 섹션 인터랙션까지 함께 정리할 기준이 없어 운영 측면의 복잡도가 커지고 있었습니다.',
 						headline:
 							'예외 흐름과 반응형 보완을 일관되게 관리할 기준이 필요했습니다',
 						description:
@@ -459,6 +501,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '해결 1',
+						context:
+							'이미지 배치 기준을 `coverImage` 스키마 하나로 통합해 디자인 변경 대응을 데이터 중심으로 전환했습니다.',
 						headline: '`coverImage` 스키마로 이미지 렌더링 기준을 통합했습니다',
 						description:
 							'기존 이미지 레이아웃 스키마를 제거하고, 디바이스별 렌더링 기준을 `coverImage`로 묶어 레이아웃 판단 기준을 단순화했습니다.',
@@ -470,6 +514,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '해결 2',
+						context:
+							'`externalUrl`을 기준으로 이동 방식을 분리해 외부 링크와 내부 상세 페이지를 하나의 규칙으로 관리했습니다.',
 						headline: '`externalUrl` 기반으로 이동 흐름을 분리했습니다',
 						description:
 							'프로젝트 데이터에 `externalUrl`을 두고, 값이 있으면 외부로 리다이렉트하고 없으면 내부 상세 페이지를 렌더링하는 방식으로 구조를 정리했습니다.',
@@ -481,6 +527,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '해결 3',
+						context:
+							'반응형 레이아웃 보완과 404·리다이렉트 예외 처리를 라우팅 단계까지 함께 정리해 흐름을 단단하게 만들었습니다.',
 						headline: '반응형 구조와 예외 흐름을 함께 정리했습니다',
 						description:
 							'최대 너비 확장 대응과 섹션 진입 애니메이션을 정리하면서, 존재하지 않는 항목은 404로 처리해 예외 흐름도 함께 다듬었습니다.',
@@ -499,6 +547,8 @@ export const projects: Project[] = [
 				pages: [
 					{
 						label: '결과 1',
+						context:
+							'다양한 디바이스에서 레이아웃과 콘텐츠 전환 흐름이 더 안정적으로 이어지며 전달력이 좋아졌습니다.',
 						headline: '반응형 완성도와 콘텐츠 전달력이 함께 좋아졌습니다',
 						description:
 							'섹션별 인터랙션과 레이아웃 구조 보완을 통해 페이지 흐름이 더 자연스러워졌고, 다양한 디바이스에서의 사용성도 개선됐습니다.',
@@ -510,6 +560,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '결과 2',
+						context:
+							'프로젝트 데이터를 중심으로 콘텐츠를 확장할 수 있게 되면서 운영과 유지보수의 기준이 더 명확해졌습니다.',
 						headline: '포트폴리오 데이터 구조가 더 확장 가능해졌습니다',
 						description:
 							'프로젝트 항목을 추가하거나 수정할 때, 컴포넌트 로직보다 데이터 수정에 더 집중할 수 있는 구조로 바뀌었습니다.',
@@ -521,6 +573,8 @@ export const projects: Project[] = [
 					},
 					{
 						label: '결과 3',
+						context:
+							'외부 링크, 내부 상세 페이지, 존재하지 않는 항목 처리까지 모두 일관된 이동 규칙으로 정리할 수 있게 됐습니다.',
 						headline: '예외 처리와 이동 흐름이 일관된 규칙 위에 정리됐습니다',
 						description:
 							'존재하지 않는 항목, 외부 링크 프로젝트, 내부 상세 페이지 프로젝트가 모두 하나의 흐름 안에서 관리되도록 정리할 수 있었습니다.',

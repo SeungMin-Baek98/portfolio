@@ -163,13 +163,6 @@ export function SiteHeader() {
 									})}
 								</ul>
 							</nav>
-
-							<div className="border-border/70 mt-8 border-t pt-6">
-								<p className="text-text-subtle text-sm">
-									문제 해결 과정과 사용자 경험 개선 관점을 중심으로 정리한
-									프론트엔드 포트폴리오입니다.
-								</p>
-							</div>
 						</motion.aside>
 					</motion.div>
 				) : null}

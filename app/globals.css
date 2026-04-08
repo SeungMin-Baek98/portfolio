@@ -23,7 +23,7 @@
 
 	--ui-text-display: clamp(2.75rem, 6vw, 3.2rem);
 	--ui-leading-display: 1.02;
-	--ui-text-heading: clamp(1.9rem, 4vw, 2.8rem);
+	--ui-text-heading: clamp(1.5rem, 3vw, 2.5rem);
 	--ui-leading-heading: 1.12;
 	--ui-text-title: 1.25rem;
 	--ui-leading-title: 1.4;

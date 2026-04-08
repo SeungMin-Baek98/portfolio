@@ -32,7 +32,11 @@ export const heroContent: HeroContent = {
 	highlights: [
 		{ label: '최근 경험', value: '프론트엔드 인턴과 개인·팀 프로젝트 수행' },
 		{ label: '강점', value: '사용자 흐름 개선과 구조 정리' },
-		{ label: '기록 습관', value: '노션 아카이브로 학습과 트러블슈팅 정리' }
+		{
+			label: '기록 습관',
+			value: '노션 아카이브로 학습과 트러블슈팅 정리',
+			link: 'https://seugnmin.notion.site/32c1f1669d10813ea53acaba9dc431ec?source=copy_link'
+		}
 	]
 };
 

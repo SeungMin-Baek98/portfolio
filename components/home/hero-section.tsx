@@ -47,10 +47,25 @@ export function HeroSection() {
 							<ul className="space-y-4">
 								{heroContent.highlights.map(item => (
 									<li key={item.label} className="space-y-1">
-										<p className="text-text-subtle text-sm">{item.label}</p>
-										<p className="text-title text-text-main font-semibold">
-											{item.value}
-										</p>
+										{item.link ? (
+											<>
+												<p className="text-text-subtle text-sm">{item.label}</p>
+												<a
+													href={item.link}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="text-title text-text-main font-semibold hover:underline">
+													{item.value}
+												</a>
+											</>
+										) : (
+											<>
+												<p className="text-text-subtle text-sm">{item.label}</p>
+												<p className="text-title text-text-main font-semibold">
+													{item.value}
+												</p>
+											</>
+										)}
 									</li>
 								))}
 							</ul>

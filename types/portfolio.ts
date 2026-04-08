@@ -12,6 +12,7 @@ export type LinkItem = {
 export type HeroHighlight = {
 	label: string;
 	value: string;
+	link?: string;
 };
 
 export type HeroContent = {

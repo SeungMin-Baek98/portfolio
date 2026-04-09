@@ -91,13 +91,7 @@ export default async function ProjectDetailPage({
 					</FadeIn>
 
 					<FadeIn delay={0.12}>
-						<ProjectProcessSection
-							sections={[
-								project.detail.problem,
-								project.detail.solution,
-								project.detail.result
-							]}
-						/>
+						<ProjectProcessSection sections={project.detail.processSections} />
 					</FadeIn>
 
 					<FadeIn delay={0.06}>

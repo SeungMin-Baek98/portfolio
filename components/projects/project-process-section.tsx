@@ -32,6 +32,11 @@ export function ProjectProcessSection({
 			wrapper:
 				'border-l-[6px] border-l-stone-300 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(235,232,224,0.98))]',
 			badge: 'bg-white text-text-main border-border-strong'
+		},
+		{
+			wrapper:
+				'border-l-[6px] border-l-amber-400 bg-[linear-gradient(180deg,rgba(255,252,245,0.98),rgba(245,240,228,0.98))]',
+			badge: 'bg-amber-100 text-text-main border-amber-300'
 		}
 	];
 
@@ -44,8 +49,8 @@ export function ProjectProcessSection({
 							Problem Solving Process
 						</p>
 						<p className="text-body text-text-subtle max-w-2xl">
-							문제를 정의하고, 해결 방식을 설계한 뒤, 결과를 정리한 흐름을
-							순서대로 볼 수 있도록 구성했습니다.
+							각 단계에서 어떤 상황을 정의했고, 어떤 판단과 실행을 거쳐 어떤
+							결과를 만들었는지 순서대로 읽을 수 있도록 구성했습니다.
 						</p>
 					</div>
 
@@ -80,8 +85,8 @@ export function ProjectProcessSection({
 									Step {currentIndex + 1} / {totalSteps}
 								</span>
 								<p className="text-body text-text-subtle max-w-2xl">
-									같은 단계 안에서 Problem, Solution, Result를 함께 비교하며
-									읽을 수 있도록 구성했습니다.
+									같은 단계 안에서 각 섹션을 함께 비교하며 읽을 수 있도록
+									구성했습니다.
 								</p>
 							</div>
 
@@ -130,7 +135,9 @@ export function ProjectProcessSection({
 											key={`${section.title}-${page.label}`}
 											className={cn(
 												'border-border-strong rounded-xl border px-5 py-5 md:px-6 md:py-6',
-												sectionToneClasses[sectionIndex]?.wrapper
+												sectionToneClasses[
+													sectionIndex % sectionToneClasses.length
+												]?.wrapper
 											)}
 											initial={
 												shouldReduceMotion ? false : { opacity: 0, y: 12 }
@@ -146,7 +153,9 @@ export function ProjectProcessSection({
 													<span
 														className={cn(
 															'rounded-pill inline-flex border px-3 py-2 text-sm font-semibold',
-															sectionToneClasses[sectionIndex]?.badge
+															sectionToneClasses[
+																sectionIndex % sectionToneClasses.length
+															]?.badge
 														)}>
 														{section.title}
 													</span>

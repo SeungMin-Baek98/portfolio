@@ -68,9 +68,7 @@ export type Project = {
 	links: LinkItem[];
 	detail: {
 		overview: string;
-		problem: DetailSection;
-		solution: DetailSection;
-		result: DetailSection;
+		processSections: DetailSection[];
 		techStack: TechReason[];
 	};
 };

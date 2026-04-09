@@ -163,6 +163,12 @@ export const contactContent: ContactContent = {
 			note: '포지션 제안, 협업 제안, 포트폴리오 관련 문의'
 		},
 		{
+			label: 'Instagram',
+			value: 'instagram.com/s__min__2',
+			href: 'https://www.instagram.com/s__min__2/',
+			note: '빠른 연락이 필요한 경우의 DM 문의'
+		},
+		{
 			label: 'GitHub',
 			value: 'github.com/SeungMin-Baek98',
 			href: 'https://github.com/SeungMin-Baek98',

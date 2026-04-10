@@ -23,9 +23,20 @@ export function KeyStrengthsSection() {
 								<article className="surface-panel h-full p-6 md:p-7">
 									<div className="space-y-4">
 										<div className="space-y-2">
-											<p className="text-title text-text-main font-semibold">
-												{strength.title}
-											</p>
+											<div className="flex items-center justify-between">
+												<p className="text-title text-text-main font-semibold">
+													{strength.title}
+												</p>
+												{strength.link && (
+													<a
+														href={strength.link}
+														target="_blank"
+														rel="noopener noreferrer"
+														className="text-text-main text-sm font-semibold transition-opacity hover:underline hover:opacity-70">
+														관련 기록 보기
+													</a>
+												)}
+											</div>
 											<p className="text-text-subtle text-sm font-medium">
 												{strength.summary}
 											</p>

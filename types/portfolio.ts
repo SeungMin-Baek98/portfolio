@@ -28,6 +28,7 @@ export type Strength = {
 	title: string;
 	summary: string;
 	detail: string;
+	link?: string;
 };
 
 export type TechStackGroup = {

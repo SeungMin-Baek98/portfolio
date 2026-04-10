@@ -57,7 +57,8 @@ export const keyStrengths: Strength[] = [
 		title: '기록과 협업',
 		summary: '배운 것과 해결 과정을 남기는 개발',
 		detail:
-			'노션 아카이브, Jira 이슈, PR 리뷰 기반으로 작업 맥락을 남기며 혼자 하는 프로젝트와 팀 협업 모두에서 일관된 흐름을 만들고자 합니다.'
+			'노션 아카이브, Jira 이슈, PR 리뷰 기반으로 작업 맥락을 남기며 혼자 하는 프로젝트와 팀 협업 모두에서 일관된 흐름을 만들고자 합니다.',
+		link: 'https://seugnmin.notion.site/32c1f1669d10813ea53acaba9dc431ec?source=copy_link'
 	}
 ];
 

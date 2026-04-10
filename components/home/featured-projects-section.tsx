@@ -15,7 +15,7 @@ export function FeaturedProjectsSection() {
 					<div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 						<SectionHeading
 							eyebrow="Featured Projects"
-							title="문제와 해결 과정을 빠르게 파악할 수 있는 대표 프로젝트"
+							title={`문제와 해결 과정을 빠르게\n파악할 수 있는 대표 프로젝트`}
 							description="카드에서는 핵심 요약만 보여주고, 상세 페이지에서는 문제 정의부터 해결 방식과 기대 효과까지 단계적으로 확인할 수 있도록 연결했습니다."
 						/>
 						<FadeIn delay={0.08}>

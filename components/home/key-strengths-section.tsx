@@ -10,7 +10,7 @@ export function KeyStrengthsSection() {
 				<div className="space-y-10">
 					<SectionHeading
 						eyebrow="Key Strengths"
-						title="문제를 설명하는 방식에서도 개발자의 관점을 보여주고 싶습니다"
+						title={`문제를 설명하는 방식에서도\n개발자의 관점을 보여주고 싶습니다`}
 						description="포트폴리오의 첫 화면에서는 기술 키워드보다 어떤 방식으로 문제를 다루는지 먼저 드러나도록 구성했습니다."
 					/>
 

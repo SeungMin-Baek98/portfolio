@@ -10,7 +10,7 @@ export function TechStackSection() {
 				<div className="space-y-10">
 					<SectionHeading
 						eyebrow="Tech Stack"
-						title="현재 사용하고 있는 기술 스택을 카테고리별로 정리했습니다"
+						title={`현재 사용하고 있는 기술 스택을\n카테고리별로 정리했습니다`}
 						description="기술 이름을 단순히 나열하지 않고, 어떤 영역에서 주로 사용하는지 한눈에 읽히도록 묶었습니다. 이후 실제 프로젝트 설명과 함께 연결하기 쉬운 구조입니다."
 					/>
 

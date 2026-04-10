@@ -16,7 +16,9 @@ export function SectionHeading({
 			<div className="space-y-4">
 				<span className="eyebrow">{eyebrow}</span>
 				<div className="space-y-3">
-					<h2 className="text-heading text-text-main font-semibold">{title}</h2>
+					<h2 className="text-heading text-text-main font-semibold whitespace-pre-line">
+						{title}
+					</h2>
 					<p className="text-body text-text-subtle">{description}</p>
 				</div>
 			</div>

@@ -67,7 +67,7 @@ export const techStackGroups: TechStackGroup[] = [
 		category: 'Front-End',
 		description:
 			'주로 화면 구조를 설계하고, 사용자 흐름이 자연스럽게 이어지도록 인터페이스를 구현할 때 사용하는 기술입니다.',
-		items: ['React', 'Next.js', 'TypeScript', 'JavaScript']
+		items: ['JavaScript', 'TypeScript', 'React', 'Next.js']
 	},
 	{
 		category: 'State & Data',
@@ -79,7 +79,7 @@ export const techStackGroups: TechStackGroup[] = [
 		category: 'Styling & UI',
 		description:
 			'가독성 좋은 화면 구성과 재사용 가능한 UI 시스템, 그리고 필요한 만큼의 자연스러운 인터랙션을 만드는 데 사용합니다.',
-		items: ['Tailwind CSS', 'Framer Motion', 'Storybook']
+		items: ['Tailwind CSS', 'Framer Motion', 'Storybook', 'Prettier', 'ESLint']
 	},
 	{
 		category: 'Collaboration',

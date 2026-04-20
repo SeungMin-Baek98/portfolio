@@ -34,7 +34,7 @@ export const projects: Project[] = [
 			},
 			{
 				label: '노션 기록',
-				href: 'https://www.notion.so/2d01f1669d10804d8901e2ad79f90fe0',
+				href: 'https://seugnmin.notion.site/2025-12-2d01f1669d10804d8901e2ad79f90fe0?source=copy_link',
 				external: true
 			}
 		],
@@ -297,7 +297,7 @@ export const projects: Project[] = [
 			},
 			{
 				label: '노션 기록',
-				href: 'https://www.notion.so/2aa1f1669d108039af9ccf08b6242b8e',
+				href: 'https://seugnmin.notion.site/Gameow-2aa1f1669d108039af9ccf08b6242b8e?source=copy_link',
 				external: true
 			}
 		],
@@ -552,7 +552,7 @@ export const projects: Project[] = [
 			},
 			{
 				label: '노션 기록',
-				href: 'https://www.notion.so/3181f1669d1080739a0be558220c5299',
+				href: 'https://seugnmin.notion.site/2026-02-01-2026-02-28-3181f1669d1080739a0be558220c5299?source=copy_link',
 				external: true
 			}
 		],
